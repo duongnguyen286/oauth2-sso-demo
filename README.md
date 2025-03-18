@@ -14,6 +14,11 @@ Java 21+ and docker are required.
 ./mvnw spring-boot:run -f authorization -Dspring-boot.run.arguments="--spring.docker.compose.enabled=true --spring.docker.compose.file=$(pwd)/compose.yaml"
 ./mvnw spring-boot:run -f todo-api -Dspring-boot.run.arguments="--spring.docker.compose.enabled=true --spring.docker.compose.file=$(pwd)/compose.yaml"
 ./mvnw spring-boot:run -f todo-frontend -Dspring-boot.run.arguments="--spring.docker.compose.enabled=true --spring.docker.compose.file=$(pwd)/compose.yaml"
+
+Windowns CMD
+mvnw.cmd spring-boot:run -f authorization -Dspring-boot.run.arguments="--spring.docker.compose.enabled=true --spring.docker.compose.file=%cd%\compose.yaml"
+mvnw.cmd spring-boot:run -f todo-api -Dspring-boot.run.arguments="--spring.docker.compose.enabled=true --spring.docker.compose.file=%cd%\compose.yaml"
+mvnw.cmd spring-boot:run -f todo-frontend -Dspring-boot.run.arguments="--spring.docker.compose.enabled=true --spring.docker.compose.file=%cd%\compose.yaml"
 ```
 
 Visit http://localhost:8080 (todo-frontend). The first time you visit, you will be redirected to http://127.0.0.1:9000 (authorization).
